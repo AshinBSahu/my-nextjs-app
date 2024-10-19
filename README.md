@@ -67,7 +67,7 @@ To run the Next.js app locally (without Docker), follow these steps:
 
     Then run the following command in your terminal:
     ```
-        mysql -u root -p < mysql-init/init.sql
+    mysql -u root -p < mysql-init/init.sql
     ```
 
 
@@ -94,7 +94,7 @@ To containerize the Next.js app along with MySQL using Docker, follow the steps 
 2. Build the Docker image that includes both the Next.js app and MySQL:
 
     ```bash
-    docker build -t yourusername/my-nextjs-app .
+    docker build -t my-nextjs-app .
     ```
 
 ### Running the Docker Container
@@ -102,7 +102,7 @@ To containerize the Next.js app along with MySQL using Docker, follow the steps 
 1. Once the image is built, run the Docker container:
 
     ```bash
-    docker run -p 3000:3000 -p 3306:3306 yourusername/my-nextjs-app
+    docker run -p 3000:3000 -p 3306:3306 my-nextjs-app
     ```
 
 2. This will start the Next.js app on port `3000` and MySQL on port `3306`.
