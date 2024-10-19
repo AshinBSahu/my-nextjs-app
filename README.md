@@ -123,3 +123,7 @@ services:
       - "3306:3306"
     volumes:
       - ./mysql-init/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+docker-compose up --build
+
+## Environment Variables
