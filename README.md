@@ -121,16 +121,15 @@ To manually connect to the MySQL database running in the container, use:
     
 Then, you can run queries like:
 
-    ```bash
+
     USE my_nextjs_app;
     SELECT * FROM users;
-    ```
+
 
 ## Contributing
 
 Contributions are welcome! Please fork this repository, create a new branch, and submit a pull request.
 
 ## License
-    ```bash
-        Open Source
-    ```
+
+    Open Source
