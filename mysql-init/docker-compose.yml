@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: app_user         # Change to app_user
+      DB_PASSWORD: app_password # Set the password for app_user
+      DB_NAME: my_nextjs_app
+
+  db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: my_nextjs_app  # Create this database
+      MYSQL_USER: app_user            # Create the new user
+      MYSQL_PASSWORD: app_password    # Password for the new user
+    volumes:
+      - ./mysql-init:/docker-entrypoint-initdb.d  # Mount the init directory
