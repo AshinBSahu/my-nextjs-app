@@ -33,6 +33,7 @@ Before you begin, ensure you have the following tools installed:
 - [Node.js](https://nodejs.org/) (v18 or higher)
 - [Docker](https://www.docker.com/get-started)
 - [Git](https://git-scm.com/)
+- [MySQL] (https://www.mysql.com/products/community/)
 
 ## Running the App Locally
 
@@ -41,8 +42,8 @@ To run the Next.js app locally (without Docker), follow these steps:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/AshinBSahu/my-nextjs-app.git
+    cd my-nextjs-app
     ```
 
 2. Install the dependencies:
@@ -53,15 +54,33 @@ To run the Next.js app locally (without Docker), follow these steps:
 
 3. Set up the MySQL database:
 
+### Prerequisites
+
+- MySQL server installed and running on your local machine.
+- The `init.sql` file located in the mysql-init folder of your project directory (this file contains the SQL commands to create the database, tables, and app user).
+
+### Instructions to create databse
+
+1. **Open a Terminal**:
+   Open a terminal window on your machine.
+
+2. **Log in to MySQL**:
+   Use the following command to log in to your MySQL server. You may need to replace `root` with your MySQL username if it's different:
+
+   ```bash
+   mysql -u root -p
    - Make sure MySQL is installed and running on your system.
    - Create a database named `my_nextjs_app`.
 
-   Run the following commands to set up the database:
-
-    ```bash
-    mysql -u root -p
-    CREATE DATABASE my_nextjs_app;
     ```
+    exit
+    ```
+
+    Then run the following command in your terminal:
+    ```
+        mysql -u root -p < mysql-init/init.sql
+    ```
+
 
 4. Run the development server:
 
