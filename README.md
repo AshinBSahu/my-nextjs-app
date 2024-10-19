@@ -10,11 +10,10 @@ This repository contains a simple **Next.js** application that accepts a user's 
 4. [Docker Setup](#docker-setup)
    - [Building the Docker Image](#building-the-docker-image)
    - [Running the Docker Container](#running-the-docker-container)
-5. [Environment Variables](#environment-variables)
-6. [Accessing the Application](#accessing-the-application)
-7. [MySQL Database Setup](#mysql-database-setup)
-8. [Contributing](#contributing)
-9. [License](#license)
+5. [Accessing the Application](#accessing-the-application)
+6. [Validate Database](#validate-database)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 ## Project Overview
 
@@ -107,57 +106,24 @@ To containerize the Next.js app along with MySQL using Docker, follow the steps 
 
 2. This will start the Next.js app on port `3000` and MySQL on port `3306`.
 
-### Docker Compose Alternative
 
-If you prefer using **Docker Compose** for easier management, create a `docker-compose.yml` file like this:
-
-```yaml
-version: '3.8'
-services:
-  app:
-    build: .
-    ports:
-      - "3000:3000"
-    depends_on:
-      - db
-  db:
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: my_nextjs_app
-      MYSQL_USER: app_user
-      MYSQL_PASSWORD: user_password
-    ports:
-      - "3306:3306"
-    volumes:
-      - ./mysql-init/init.sql:/docker-entrypoint-initdb.d/init.sql
-```
-## Environment Variables
-```
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=root_password
-DB_DATABASE=my_nextjs_app
-```
 ## Accessing the Application
-```
-http://localhost:3000
-```
-## MySQL Database Setup
+    ```
+    http://localhost:3000
+    ```
+## Validate Database
 
 To manually connect to the MySQL database running in the container, use:
 
-```
-
-docker exec -it <container-id> mysql -u app_user -p
-Then, you can run queries like:
-```
+    ```
+    mysql -u app_user -p
+    ```
 Then, you can run queries like:
 
-```
-USE my_nextjs_app;
-SELECT * FROM users;
-```
+    ```
+    USE my_nextjs_app;
+    SELECT * FROM users;
+    ```
 
 ## Contributing
 
