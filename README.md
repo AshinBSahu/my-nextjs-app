@@ -33,7 +33,7 @@ Before you begin, ensure you have the following tools installed:
 - [Node.js](https://nodejs.org/) (v18 or higher)
 - [Docker](https://www.docker.com/get-started)
 - [Git](https://git-scm.com/)
-- [MySQL] (https://www.mysql.com/products/community/)
+- [MySQL](https://www.mysql.com/products/community/)
 
 ## Running the App Locally
 
