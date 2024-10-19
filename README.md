@@ -116,9 +116,9 @@ To containerize the Next.js app along with MySQL using Docker, follow the steps 
 
 To manually connect to the MySQL database running in the container, use:
 
-    ```bash
+    
     mysql -u app_user -p
-    ```
+    
 Then, you can run queries like:
 
     ```bash
