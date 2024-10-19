@@ -125,16 +125,16 @@ services:
       - ./mysql-init/init.sql:/docker-entrypoint-initdb.d/init.sql
 ```
 ## Environment Variables
-
+```
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=root_password
 DB_DATABASE=my_nextjs_app
-
+```
 ## Accessing the Application
-
+```
 http://localhost:3000
-
+```
 ## MySQL Database Setup
 
 To manually connect to the MySQL database running in the container, use:
@@ -157,16 +157,5 @@ Contributions are welcome! Please fork this repository, create a new branch, and
 
 ## License
 ```
-### Explanation:
-- **Project Overview**: Summarizes the app, the purpose, and the features.
-- **Prerequisites**: Lists the tools you need to have installed before running the app.
-- **Running the App Locally**: Describes how to run the app without Docker, for development purposes.
-- **Docker Setup**: Instructions to containerize both the app and the database using Docker and Docker Compose.
-- **Environment Variables**: Lists required environment variables for the app to connect to MySQL.
-- **Accessing the Application**: How to access the app after starting the container.
-- **MySQL Database Setup**: Instructions on connecting to and verifying the MySQL database.
-- **Contributing**: Encourages contributions and collaboration.
-- **License**: License information.
-
-Feel free to adjust the instructions or details to match your setup.
+    Open Source
 ```
