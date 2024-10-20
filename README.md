@@ -15,7 +15,7 @@ This repository contains a simple **Next.js** application that accepts a user's 
 7. [Contributing](#contributing)
 8. [License](#license)
 9. [Instructions to Pull and Run the Docker Image from GitHub Packages](#instructions-to-pull-and-run-the-docker-image-from-github-packages)
-1. [Prerequisites](#prerequisites)
+[   - Prerequisites](#prerequisites)
 2. [Steps to Pull and Run the Docker Image](#steps-to-pull-and-run-the-docker-image)
    - [Log in to GitHub Packages](#log-in-to-github-packages)
    - [Pull the Docker Image](#pull-the-docker-image)
@@ -147,7 +147,7 @@ Contributions are welcome! Please fork this repository, create a new branch, and
 
 Follow these steps to pull and run the Docker image stored in GitHub Packages:
 
-### Prerequisites
+   **Prerequisites**
 - Docker installed on your local machine.
 - Access to the GitHub repository where the Docker image is stored.
 - Logged in to the GitHub Container Registry (required to pull images from GitHub Packages).
