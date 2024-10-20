@@ -14,6 +14,14 @@ This repository contains a simple **Next.js** application that accepts a user's 
 6. [Validate Database](#validate-database)
 7. [Contributing](#contributing)
 8. [License](#license)
+9. [Instructions to Pull and Run the Docker Image from GitHub Packages](#instructions-to-pull-and-run-the-docker-image-from-github-packages)
+1. [Prerequisites](#prerequisites)
+2. [Steps to Pull and Run the Docker Image](#steps-to-pull-and-run-the-docker-image)
+   - [Log in to GitHub Packages](#log-in-to-github-packages)
+   - [Pull the Docker Image](#pull-the-docker-image)
+   - [Run the Docker Container](#run-the-docker-container)
+   - [Access the Application](#access-the-application)
+3. [Notes](#notes)
 
 ## Project Overview
 
@@ -133,3 +141,71 @@ Contributions are welcome! Please fork this repository, create a new branch, and
 ## License
 
     Open Source
+
+
+## Instructions to Pull and Run the Docker Image from GitHub Packages
+
+Follow these steps to pull and run the Docker image stored in GitHub Packages:
+
+### Prerequisites
+- Docker installed on your local machine.
+- Access to the GitHub repository where the Docker image is stored.
+- Logged in to the GitHub Container Registry (required to pull images from GitHub Packages).
+
+### Steps to Pull and Run the Docker Image
+
+1. **Log in to GitHub Packages**:
+   First, authenticate Docker with GitHub Packages by running the following command:
+
+   ```bash
+   echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+   ```
+
+   Replace:
+   - `CR_PAT` with your GitHub Personal Access Token (PAT) that has permissions to access packages.
+   - `USERNAME` with your GitHub username.
+
+2. **Pull the Docker Image**:
+   Run the following command to pull the Docker image from GitHub Packages:
+
+   ```bash
+   docker pull ghcr.io/ashinbsahu/my-nextjs-app:latest
+   ```
+   OR
+   ```linux/amd64
+   docker pull ghcr.io/ashinbsahu/my-nextjs-app:latest@sha256:0dbae5c1214650f4d1220f2a742b717159bafe5292d2073dfc2568afc076ecc1
+    ```
+    OR
+    ```unknown/unknown
+    docker pull ghcr.io/ashinbsahu/my-nextjs-app:latest@sha256:db122f9368037f2f2594e108d4e1ced9297bf9327d1289a778a5346042b6d4a5
+    ```
+
+3. **Run the Docker Container**:
+   After pulling the image, run the following command to start the container:
+
+   ```bash
+   docker run -d -p 3000:3000 -p 3306:3306 ghcr.io/ashinbsahu/my-nextjs-app:latest
+   ```
+
+   This will map port 3000 & 3036 of your machine to port 3000 & 3036 of the container.
+
+   Example:
+   ```bash
+   docker run -d -p 3000:3000 -p 3306:3306 ghcr.io/ashinbsahu/my-nextjs-app:latest
+   ```
+
+4. **Access the Application**:
+   Open your browser and go to:
+
+   ```
+   http://localhost:3000
+   ```
+
+   You should now see the application running.
+
+### Notes
+- Ensure you have the necessary access permissions to the GitHub repository and the Docker image.
+- Adjust the port number (`3000:3000` and `3306:3306`) based on the port your application uses inside the container.
+
+
+
