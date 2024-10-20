@@ -15,7 +15,7 @@ This repository contains a simple **Next.js** application that accepts a user's 
 7. [Contributing](#contributing)
 8. [License](#license)
 9. [Instructions to Pull and Run the Docker Image from GitHub Packages](#instructions-to-pull-and-run-the-docker-image-from-github-packages)
-[   - Docker Prerequisites](#docker-prerequisites)
+   - [Docker Prerequisites](#docker-prerequisites)
 10. [Steps to Pull and Run the Docker Image](#steps-to-pull-and-run-the-docker-image)
    - [Log in to GitHub Packages](#log-in-to-github-packages)
    - [Pull the Docker Image](#pull-the-docker-image)
